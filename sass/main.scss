@@ -1,0 +1,421 @@
+/*
+ * Imports
+ */
+@import 'reset';
+@import 'variables';
+
+/*
+ * Container
+ */
+
+body {
+    font-size: 62.5%;
+    
+    img {
+        max-width: 100%;
+    }
+}
+ 
+ .container {
+    max-width: $wrapper;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+/* 
+ * Header
+ */
+
+.about-us, .portfolio, 
+.our-team, .contact {
+    min-height: 750px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    color: $colorLetter;
+    font-family: $openSans;
+
+    h1 {
+        font-size: 4.5em;
+        margin: 55px 0 35px;
+    }
+    
+    p {
+        font-size: 1.5em;
+        padding: 0 90px;
+    }
+}
+
+.nav-bar {
+    width: 100%; 
+    border-bottom: 1px solid $blueBorderColor;
+    background: $bgBlueCyan;
+    font-size: 1.3em;
+    position: fixed;
+    z-index: 9; 
+
+    .logo {
+        color: $bgWhite;
+        font-size: 3.0em;
+        float: left;
+        font-family: $openSans;
+        font-weight: 600;
+        line-height: 95px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .menu {
+        float: right;
+        line-height: 65px;
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            flex-flow: row;
+
+            a {
+                text-decoration: none;
+                display: block;
+                color: $bgWhite;
+                padding: 1.2em;
+                font-family: $openSans;
+                text-transform: capitalize;
+
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.header {
+    background: $bgBlueCyan;
+    min-height: 750px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    color: $colorLetter;
+    font-family: $openSans;
+
+    h1 {
+        color: $bgWhite;
+        font-family: $openSans;
+        font-size: 45px;
+        margin-top: 132px
+    }
+
+    h4 {
+        color: $bgWhite;
+        font-family: $openSans;
+        font-size: 2.5em;
+        margin-top: 35px;
+    }
+
+    .image {
+        margin-top: 42px;
+    }
+
+    img {
+        width: 50%;
+    }
+}
+
+/*
+ * About-Us
+ */
+
+.about-us {
+    background: $bgWhite;
+
+    .image {
+        margin: 60px 38px;
+    }
+
+    img {
+        width: 44%;
+    }
+}
+
+/*
+ * Our Team
+ */
+
+.our-team {
+    background: $bgGray;
+
+    h1 {
+        font-size: 4.5em;
+    }
+
+    span {
+        font-size: 2.5em;
+        padding: 20px 20px;
+        display: block;
+    }
+
+    .container-business {
+        display: flex;
+        margin-top: 55px;
+        justify-content: space-around;
+        
+        p {
+            padding: 0 20px;
+        }
+
+        img {
+            width: 77%;
+        }
+
+        .btn-email {
+            margin-top: 30px;
+            border: none;
+            border-radius: 3px;
+            background: $bgBlueCyan;
+            padding: 10px 30px;
+            display: inline-block;
+        }
+
+        .fa-envelope-o {
+            color: #fff;
+        }
+    }
+}
+
+/*
+ * Portfolio
+ */
+
+.portfolio {
+    background: $bgWhite;
+
+    .container-btn {
+
+        li {
+            display: inline-flex;
+            justify-content: space-around;
+
+            &:nth-child(even) {
+                padding: 0 10px;
+            }
+
+            
+        }
+    }
+
+    .container-btn {
+
+        .btn-portfolio {
+            padding: 10px 40px;
+            border: 1px solid #a6a6a6;
+            margin-top: 45px;
+            color: #a6a6a6;
+            border-radius: 3px;
+            text-decoration: none;
+            font-size: 1.8em;
+
+            &:hover {
+                border-color: $colorLetter;
+                color: $colorLetter;
+            }
+        }
+    }
+
+    .container-images {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-top: 45px;
+
+        .item-portfolio {
+            margin-bottom: 55px;
+            position: relative;
+            background-image: url('/image/image-portfolio.png');
+            width: 355px;
+            height: 345px;
+
+            &:hover {
+                background-image: url('/image/hover-portfolio.png');
+            }
+
+            .description {
+                background: $descriptionImage;
+                bottom: 0;
+                padding: 20px;
+                position: absolute;
+            }
+
+            span, p {
+                color: $bgGray;
+                float: left;
+                text-align: justify;
+            }
+
+            span {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1.5em;
+                padding: 0;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+/*
+ * Contact
+ */
+
+.contact {
+    background: $bgGray;
+
+    .form-contact {
+        display: flex;
+        flex-flow: column;
+        width: 555px;
+        margin: 55px auto;
+
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid #cccccc;
+            font-size: 1.5em;
+            color: $colorLetter;
+        }
+
+        textarea {
+            font-size: 1.5em;
+            font-family: $openSans;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            padding: 10px;
+            color: $colorLetter;
+            margin-bottom: 45px;
+        }
+
+        .btn-form {
+            padding: 10px;
+            width: 170px;
+            margin: 0 auto;
+            border: none;
+            background: $bgBlueCyan;
+            color: $bgWhite;
+            font-size: 2.5em;
+            font-family: $openSans;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: 300;
+        }
+    }
+}
+
+.footer {
+    min-height: 145px;
+    
+    .container-menu {
+        width: 600px;
+        height: 86px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        margin-left: -300px;
+        margin-top: 43px;
+    }
+
+    .footer-menu {
+        display: flex;
+        justify-content: center;
+        flex-flow: row;
+        text-decoration: none;
+        
+        li {
+
+            &:nth-child(even) {
+                padding: 0 40px;
+            }
+
+            &:nth-child(1n+2) {
+
+                &::before {
+                    content: ' : ';
+                    font-size: 1.5em;
+                    left: -17px;
+                    position: relative;
+                }
+            }
+        }
+        
+        a {
+            font-size: 1.5em;
+            color: $colorLetter;
+            font-family: $openSans;
+            text-decoration: none;
+            font-weight: 300;
+        }
+    }
+
+    .copyright {
+        text-align: center;
+        display: block;
+        margin-top: 25px;
+        font-family: $openSans;
+        color: $colorLetter;
+        font-size: 1.4em;
+        font-weight: 300;
+    }
+}
+
+/*
+ * Media Queries
+ */
+
+.header {
+
+    .nav-bar {
+        .logo {
+            @media screen and (max-width: 700px) {
+                float: none;
+            }
+
+            @media screen and (max-width: 520px) {
+                line-height: 40px;
+            }
+        }
+
+        .menu {
+            @media screen and (max-width: 520px) {
+                float: none;
+                line-height: 40px;
+            }
+        }
+
+        ul {
+            @media screen and (max-width: 700px) {
+                float: none;
+                display: flex;
+                justify-content: center;
+                flex-flow: row;
+            }   
+        }
+    }
+
+    h1 {
+        @media screen and (max-width: 800px) {
+            font-size: 4em;
+            margin-top: 130px;
+        }
+
+        @media screen and (max-width: 600px) {
+            font-size: 3em;
+            margin-top: 160px;
+        }
+    }
+
+}
